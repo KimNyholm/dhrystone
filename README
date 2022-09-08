@@ -1,3 +1,13 @@
+Update:
+- This contents of this repository has been taken from https://fossies.org/dox/dhrystone-2.1/index.html
+- In dhry_1.c the line "extern  int     times ();" has been removed to make it compilabe
+- Makefile has been updated to compile without warnings on gcc version gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0
+
+Kim Nyholm
+
+Original makefile below
+-----------------------
+
 This floppy disk contains the source code of the Dhrystone benchmark
 (version 2.1) in three languages:
 
@@ -18,12 +28,12 @@ Files containing the C version (*.h: Header File, *.c: C Modules)
   dhry.h
   dhry_1.c
   dhry_2.c
-  
+
 File containing the Pascal version:
 
   dhry.p
 
-The file RATIONALE contains the article 
+The file RATIONALE contains the article
 
   "Dhrystone Benchmark: Rationale for Version 2 and Measurement Rules"
 
