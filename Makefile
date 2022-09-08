@@ -38,11 +38,11 @@ ENUMS=					# Compiler does have enum type
 OPTIMIZE=	-Ox -G2			# Optimization Level (MSC, 80286)
 OPTIMIZE=	-O4			# Optimization Level (generic UNIX)
 GCCOPTIM=       -O
-
+WARNINGS=-Wno-implicit-int -Wno-implicit-function-declaration -Wno-builtin-declaration-mismatch -Wno-pointer-to-int-cast -Wno-unused-result
 LFLAGS=					#Loader Flags
 
-CFLAGS=	$(OPTIMIZE) $(TIME_FUNC) -DHZ=$(HZ) $(ENUMS) $(STRUCTASSIGN) $(CFL)
-GCCFLAGS= $(GCCOPTIM) $(TIME_FUNC) -DHZ=$(HZ) $(ENUMS) $(STRUCTASSIGN) $(CFL)
+CFLAGS=	$(OPTIMIZE) $(TIME_FUNC) -DHZ=$(HZ) $(ENUMS) $(STRUCTASSIGN) $(CFL) $(WARNINGS)
+GCCFLAGS= $(GCCOPTIM) $(TIME_FUNC) -DHZ=$(HZ) $(ENUMS) $(STRUCTASSIGN) $(CFL) $(WARNINGS)
 
 #
 #		You shouldn't need to touch the rest
@@ -125,7 +125,7 @@ dry2shar.3: $(FILES3)
 	shar -v -p X $(FILES3) >$@
 
 clean:
-	-rm -f *.o *.obj
+	-rm -f *.o *.obj $(UNIX_PROGS)
 
 clobber: clean
 	-rm -f $(UNIX_PROGS) $(MSC_PROGS) dry2shar.* dry2.arc

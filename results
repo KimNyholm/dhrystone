@@ -1,11 +1,15 @@
-cc without register (1000000 passes)
-Microseconds for one run through Dhrystone:   63.2 
-Dhrystones per Second:                      15835.3 
+cc without register (100000000 passes)
+Microseconds for one run through Dhrystone:  0.033 
+Dhrystones per Second:                      30612244.000 
 
-cc with register (1000000 passes)
-Microseconds for one run through Dhrystone:   63.0 
-Dhrystones per Second:                      15885.6 
+cc with register (100000000 passes)
+Microseconds for one run through Dhrystone:  0.034 
+Dhrystones per Second:                      29702970.000 
 
-gcc without register (1000000 passes)
+gcc without register (100000000 passes)
+Microseconds for one run through Dhrystone:  0.042 
+Dhrystones per Second:                      23715416.000 
 
-gcc with register (1000000 passes)
+gcc with register (100000000 passes)
+Microseconds for one run through Dhrystone:  0.044 
+Dhrystones per Second:                      22900764.000 
